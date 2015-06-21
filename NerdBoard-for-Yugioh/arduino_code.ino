@@ -1,3 +1,4 @@
+//diode pins setup
 int led_field_one = 22;
 int led_field_two = 26;
 int led_field_three = 30;
@@ -23,7 +24,7 @@ void setup() {
   Serial.begin(9600);
 }
 void loop() {
-  // read the input on analog pin 0:
+  // read the input on analog pins
   int sensor_field_one = analogRead(A0);
   int sensor_field_two = analogRead(A1);
   int sensor_field_three = analogRead(A2);
@@ -34,7 +35,8 @@ void loop() {
   int sensor_field_eight = analogRead(A9);
   int sensor_field_nine = analogRead(A15);
   int sensor_field_ten = analogRead(A11);
-  
+
+  //depending on the shadow above light on and off  
   if(sensor_field_one<400) {
      digitalWrite(led_field_one, HIGH);
   } else {
@@ -94,6 +96,8 @@ void loop() {
   } else {
      digitalWrite(led_field_ten, LOW);
   }
+  
+  //This part is used for debugging
   Serial.println("1");
   Serial.println(sensor_field_one);
   Serial.println("2");
