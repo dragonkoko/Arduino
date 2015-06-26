@@ -1,2 +1,2 @@
 # Arduino
-Arduino code for projects
+Arduino code, documentation and schemes for projects & free time!
